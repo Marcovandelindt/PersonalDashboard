@@ -9,7 +9,7 @@
                     <p>On this page, all drink entries for the current day are displayed. Every drink has a hydration
                         percentage,
                         which is counted towards the dailt water intake goal.</p>
-                    <a href="#" class="btn btn-outline-success">Add new drink</a>
+                    <a href="{{ route('drinks.create') }}" class="btn btn-outline-success">Add new drink</a>
                 </div>
             </div>
         </div>

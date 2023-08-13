@@ -32,3 +32,5 @@ Route::get('/water-intake', [App\Http\Controllers\WaterIntake\WaterIntakeControl
  * Drinks routes
  */
 Route::get('/drinks', [App\Http\Controllers\Drinks\DrinksController::class, 'index'])->name('drinks.index');
+Route::get('/drinks/create', [App\Http\Controllers\Drinks\DrinksController::class, 'create'])->name('drinks.create');
+Route::post('/drinks/create', [App\Http\Controllers\Drinks\DrinksController::class, 'store'])->name('drinks.store');

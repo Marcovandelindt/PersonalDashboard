@@ -10,7 +10,8 @@
                         <p>On this page you can find an overview of all drinks that have been added to the
                             application.</p>
                     </div>
-                    <a href="#" class="btn btn-outline-success"><i class="fa-solid fa-plus"></i> Add new drink</a>
+                    <a href="{{ route('drinks.create') }}" class="btn btn-outline-success"><i
+                            class="fa-solid fa-plus"></i> Add new drink</a>
                 </div>
             </div>
         </div>
@@ -30,39 +31,21 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>Batu - Kombucha</td>
-                            <td>1</td>
-                            <td>95%</td>
-                            <td>
-                                <a href="#" title="Edit"><i class="fa-solid fa-pencil text-warning"></i></a>
-                            </td>
-                            <td>
-                                <a href="#" title="Delete"><i class="fa-solid fa-trash text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Water</td>
-                            <td>1</td>
-                            <td>100%</td>
-                            <td>
-                                <a href="#" title="Edit"><i class="fa-solid fa-pencil text-warning"></i></a>
-                            </td>
-                            <td>
-                                <a href="#" title="Delete"><i class="fa-solid fa-trash text-danger"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Coffee</td>
-                            <td>1</td>
-                            <td>90%</td>
-                            <td>
-                                <a href="#" title="Edit"><i class="fa-solid fa-pencil text-warning"></i></a>
-                            </td>
-                            <td>
-                                <a href="#" title="Delete"><i class="fa-solid fa-trash text-danger"></i></a>
-                            </td>
-                        </tr>
+                        @if (!empty($drinks))
+                            @foreach ($drinks as $drink)
+                                <tr>
+                                    <td>{{ $drink->name }}</td>
+                                    <td>1</td>
+                                    <td>{{ $drink->hydration_percentage }}%</td>
+                                    <td>
+                                        <a href="#" title="Edit"><i class="fa-solid fa-pencil text-warning"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="#" title="Delete"><i class="fa-solid fa-trash text-danger"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
                         </tbody>
                     </table>
                 </div>
