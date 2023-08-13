@@ -27,3 +27,8 @@ Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'attemp
  * Water Intake routes
  */
 Route::get('/water-intake', [App\Http\Controllers\WaterIntake\WaterIntakeController::class, 'index'])->name('water-intake.index');
+
+/**
+ * Drinks routes
+ */
+Route::get('/drinks', [App\Http\Controllers\Drinks\DrinksController::class, 'index'])->name('drinks.index');

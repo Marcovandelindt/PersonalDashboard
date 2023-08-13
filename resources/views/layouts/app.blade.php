@@ -22,6 +22,8 @@
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ route('home') }}">Dashboard</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3"
                href="{{ route('water-intake.index') }}">Water Intake</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3"
+               href="{{ route('drinks.index') }}">Drinks</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Health</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Gaming</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shows & Movies</a>
