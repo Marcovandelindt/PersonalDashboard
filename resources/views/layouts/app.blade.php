@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>{{ ($title) ? $title : '' }} - Personal Dashboard</title>
+
+    @vite(['resources/sass/app.scss'])
 </head>
 <body id="app">
-	<div class="container-fluid">
-		@yield('content')
-    </div>
+<div class="container-fluid">
+    @yield('content')
+</div>
+
+@vite(['resources/js/app.js'])
 </body>
 </html>
