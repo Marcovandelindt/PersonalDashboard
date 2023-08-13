@@ -14,3 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/**
+ * Login routes
+ */
+Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'index'])->name('login');

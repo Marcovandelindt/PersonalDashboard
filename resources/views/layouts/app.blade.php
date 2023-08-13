@@ -10,9 +10,7 @@
     @vite(['resources/sass/app.scss'])
 </head>
 <body id="app">
-<div class="container-fluid">
-    @yield('content')
-</div>
+@yield('content')
 
 @vite(['resources/js/app.js'])
 </body>
