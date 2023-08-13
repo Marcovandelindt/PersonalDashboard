@@ -8,6 +8,10 @@
     <title>{{ ($title) ? $title : '' }} - Personal Dashboard</title>
 
     @vite(['resources/sass/app.scss'])
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body id="app">
 <div class="d-flex" id="wrapper">
@@ -16,7 +20,8 @@
         <div class="sidebar-heading border-bottom bg-light">Personal Dashboard</div>
         <div class="list-group list-group-flush">
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ route('home') }}">Dashboard</a>
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Water Intake</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3"
+               href="{{ route('water-intake.index') }}">Water Intake</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Health</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Gaming</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shows & Movies</a>

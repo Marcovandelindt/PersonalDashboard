@@ -1,0 +1,11 @@
+.statistic-card {
+	background-color: darken($white, 1%);
+
+    .icon-shape {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

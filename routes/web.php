@@ -22,3 +22,8 @@ Route::group(['middleware' => 'auth'], function () {
  */
 Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'index'])->name('login');
 Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'attempt'])->name('login.attempt');
+
+/**
+ * Water Intake routes
+ */
+Route::get('/water-intake', [App\Http\Controllers\WaterIntake\WaterIntakeController::class, 'index'])->name('water-intake.index');
