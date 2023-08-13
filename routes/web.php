@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
 
 /**
  * Login routes
  */
 Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'index'])->name('login');
+Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'attempt'])->name('login.attempt');

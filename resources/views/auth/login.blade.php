@@ -11,25 +11,30 @@
                         </div>
 
                         <div class="form">
-                            <form action="#" method="POST">
+                            @if (session('error'))
+                                <div class="alert alert-warning mb-4">
+                                    <span>{{ session('error') }}</span>
+                                </div>
+                            @endif
+                            <form action="{{ route('login.attempt') }}" method="POST">
                                 @csrf
 
                                 <div class="form-group mb-4">
                                     <label for="email" class="fw-bold">E-mail address <sup>*</sup></label>
                                     <input type="email" name="email" id="email"
                                            class="form-control custom-form-control mt-2"
-                                           value="{{ request()->old('email') }}">
+                                           value="{{ request()->old('email') }}" required>
                                 </div>
                                 <div class="form-group mb-5">
                                     <label for="password" class="fw-bold">Password <sup>*</sup></label>
                                     <input type="password" name="password" id="password"
-                                           class="form-control custom-form-control mt-2">
+                                           class="form-control custom-form-control mt-2" required>
+                                </div>
+
+                                <div class="form-group d-flex justify-content-end">
+                                    <input type="submit" name="login" class="btn custom-login-btn" value="Login!">
                                 </div>
                             </form>
-
-                            <div class="form-group d-flex justify-content-end">
-                                <input type="submit" class="btn custom-login-btn" value="Login!">
-                            </div>
                         </div>
                     </div>
                 </div>
